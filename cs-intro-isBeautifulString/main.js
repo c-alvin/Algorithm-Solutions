@@ -1,22 +1,10 @@
 // eslint-disable-next-line no-unused-vars
 function solution(inputString) {
-  const alphabet = 'abcdefghijklmnopqrstuvwxyz';
-  const hash = {};
-
-  for (let i = 0; i < inputString.length; i++) {
-    const prop = inputString[i];
-    if (hash[prop] !== undefined) {
-      hash[prop]++;
-    } else {
-      hash[prop] = 1;
-    }
-  }
-
-  for (let i = 0; i < alphabet.length; i++) {
-    if (hash[alphabet[i]] < hash[alphabet[i + 1]]) {
+  const s = 'abcdefghijklmnopqrstuvwxyz';
+  for (let i = 1; i < s.length; i++) {
+    if (inputString.split(s[i]).length - 1 > inputString.split(s[i - 1]).length - 1) {
       return false;
     }
   }
   return true;
-
 }
