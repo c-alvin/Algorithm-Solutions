@@ -1,8 +1,13 @@
 // eslint-disable-next-line no-unused-vars
-var maximum69Number = function (num) {
-  const maxString = num.toString();
-  const res = maxString.replace('6', '9');
+var findDuplicate = function (nums) {
+  const hash = {};
 
-  return parseInt(res);
-
+  for (let i = 0; i < nums.length; i++) {
+    const prop = nums[i];
+    if (hash[prop] !== undefined) {
+      return prop;
+    } else {
+      hash[prop] = 1;
+    }
+  }
 };

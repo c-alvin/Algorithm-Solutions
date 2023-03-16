@@ -1,27 +1,31 @@
 ## Problem
 
-You are given a positive integer num consisting only of digits 6 and 9.
+Given an array of integers nums containing n + 1 integers where each integer is in the range [1, n] inclusive.
 
-Return the maximum number you can get by changing at most one digit (6 becomes 9, and 9 becomes 6).
+There is only one repeated number in nums, return this repeated number.
+
+You must solve the problem without modifying the array nums and uses only constant extra space.
 
 ## Example
 
-Input: num = 9669
-Output: 9969
-Explanation:
-Changing the first digit results in 6669.
-Changing the second digit results in 9969.
-Changing the third digit results in 9699.
-Changing the fourth digit results in 9666.
-The maximum number is 9969.
+Example 1:
+
+Input: nums = [1,3,4,2,2]
+Output: 2
+Example 2:
+
+Input: nums = [3,1,3,4,2]
+Output: 3
 
 ## Input/Output
 
-1 <= num <= 104
-num consists of only 6 and 9 digits.
+Constraints:
+
+1 <= n <= 105
+nums.length == n + 1
+1 <= nums[i] <= n
+All the integers in nums appear only once except for precisely one integer which appears two or more times.
 
 ## Initial Thoughts
 
-1. Change to a string
-2.  Find first instance of 6 and replace with 9
-3. convert back to number.
+1. use a hashmap to see duplicates, return prop.
