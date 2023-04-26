@@ -1,32 +1,16 @@
 ## Problem
 
-Correct variable names consist only of English letters, digits and underscores and they can't start with a digit.
-
-Check if the given string is a correct variable name.
+Given an array of integers, calculate the ratios of its elements that are positive, negative, and zero. Print the decimal value of each fraction on a new line with  places after the decimal.
 
 ## Example
 
-For `name = "var_1__Int"`, the output should be
-solution(name) = true;
-For `name = "qq-q"`, the output should be
-solution(name) = false;
-For `name = "2w2"`, the output should be
-solution(name) = false.
+There are  elements, two positive, two negative and one zero. Their ratios are ,  and . Results are printed as: arr = [1,1,0,-1,-1]
 
-## Input/Output
+0.400000
+0.400000
+0.200000
 
-[execution time limit] 4 seconds (js)
-
-[input] string name
-
-Guaranteed constraints:
-1 ≤ name.length ≤ 10.
-
-[output] boolean
-
-true if name is a correct variable name, false otherwise.
 
 ## Initial Thoughts
 
-1. First check if the first value is a number, if so return false.
-2. check if the other numbers are alphanumeric or equal to '_'
+1. create 3 variables for diff proportions, loop through array and find all the values then divide those values by the length of array and return.
